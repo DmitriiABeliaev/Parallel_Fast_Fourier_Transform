@@ -47,15 +47,20 @@
   - Iterative version significantly outperforms the recursive version for large input sizes (e.g., 2^15 samples).
   - Averaged over 3 runs on SFU CSIL machines.
 
+<img width="728" height="438" alt="Image" src="https://github.com/user-attachments/assets/e476da3a-0b05-4400-998f-8895fa7fb712" />
+
 - **Parallel**:
   - Execution time increases with thread count due to excessive synchronization from threads skipping stages.
   - Barrier usage introduces overhead for thread coordination.
+
+<img width="728" height="438" alt="Image" src="https://github.com/user-attachments/assets/8221e638-b28f-44e7-beb1-28a17b83860b" />
 
 - **Distributed**:
   - Scalability with increasing process count is underwhelming.
   - Communication cost and imbalanced workload in process 0 hinder performance.
   - Measured using 1, 2, 4, and 8 processes with sample sizes of 2^10 and 2^15.
 
+<img width="728" height="438" alt="Image" src="https://github.com/user-attachments/assets/6b9531e3-d911-410f-823d-b6cb45d60fbd" />
 
 ## Conclusion
 This project demonstrated practical application of FFT in different computing environments. Main takeaways:
